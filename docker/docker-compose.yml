@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: pgvector/pgvector:pg15-latest
+    container_name: student-opp-db
+    environment:
+      POSTGRES_USER: ${DB_USER:-user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: student_opportunities
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: student-opp-api
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-user}:${DB_PASSWORD:-password}@postgres:5432/student_opportunities
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      SECRET_KEY: ${SECRET_KEY:-your-secret-key}
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      DEBUG: ${DEBUG:-true}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    container_name: student-opp-web
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      REACT_APP_API_URL: http://localhost:8000/api
+
+volumes:
+  postgres_data:
