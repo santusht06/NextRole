@@ -1,7 +1,12 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from pgvector.sqlalchemy import Vector
+import logging
+
 from app.core.config import settings
+
+logger = logging.getLogger(__name__)
 
 # Create engine with connection pooling
 engine = create_engine(
@@ -24,3 +29,24 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def init_db():
+    """Initialize database tables and extensions."""
+    try:
+        # Create pgvector extension
+        with engine.begin() as connection:
+            connection.exec_driver_sql("CREATE EXTENSION IF NOT EXISTS vector;")
+
+        # Create all tables
+        Base.metadata.create_all(bind=engine)
+        logger.info("Database tables created successfully")
+    except Exception as e:
+        logger.error(f"Error initializing database: {e}")
+        raise
+
+
+def drop_all_tables():
+    """Drop all tables (for testing/development)."""
+    Base.metadata.drop_all(bind=engine)
+    logger.info("All database tables dropped")
