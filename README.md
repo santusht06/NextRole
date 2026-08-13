@@ -281,8 +281,6 @@ GPT-4 reranks results based on query relevance for better accuracy.
 - Vector index optimization with IVFFlat
 - Database query optimization with indexes
 - Frontend code splitting with Vite
-- Database query optimization with indexes
-- Frontend code splitting with Vite
 - Efficient pagination
 - Caching strategies
 - Background job optimization
@@ -362,6 +360,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ### Docker Production
 
 ```bash
+docker-compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
+```
 docker-compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
 ```
 
