@@ -160,8 +160,6 @@ alembic upgrade head
 # Start server
 uvicorn app.main:app --reload --port 8000
 ```
-uvicorn app.main:app --reload --port 8000
-```
 
 ##### Frontend Setup
 
@@ -281,6 +279,8 @@ GPT-4 reranks results based on query relevance for better accuracy.
 ## 📊 Performance Optimization
 
 - Vector index optimization with IVFFlat
+- Database query optimization with indexes
+- Frontend code splitting with Vite
 - Database query optimization with indexes
 - Frontend code splitting with Vite
 - Efficient pagination
