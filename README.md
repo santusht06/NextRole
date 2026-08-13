@@ -60,10 +60,8 @@ NextRole/
 │   │   ├── models/        # SQLAlchemy models
 │   │   ├── services/      # Business logic
 │   │   ├── scraping/      # Scraper implementations
-│   │   ├── rag/           # RAG/Search services
-│   │   ├── embeddings/    # Embedding services
-│   │   ├── core/          # Config & database
-│   │   └── workers/       # Background jobs
+│   │   ├── workers/       # Background jobs
+│   │   └── __init__.py
 │   ├── requirements.txt
 │   └── main.py
 │
@@ -109,7 +107,7 @@ cp backend/.env.example backend/.env
 
 Update with your configuration:
 
-```env
+```makefile
 # Database
 DATABASE_URL=postgresql://user:password@localhost:5432/student_opportunities
 
@@ -130,7 +128,7 @@ ENVIRONMENT=development
 docker-compose -f docker/docker-compose.yml up -d
 
 # Create database tables
-docker-compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db()
+docker-compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db
 
 # Seed sample data
 docker-compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
@@ -160,6 +158,8 @@ pip install -r requirements.txt
 alembic upgrade head
 
 # Start server
+uvicorn app.main:app --reload --port 8000
+```
 uvicorn app.main:app --reload --port 8000
 ```
 
