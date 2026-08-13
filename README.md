@@ -362,8 +362,6 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```bash
 docker-compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
 ```
-docker-compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
-```
 
 ## 🤝 Contributing
 
