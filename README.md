@@ -59,18 +59,18 @@ A modern, production‑ready platform for discovering genuine and active student
 - TailwindCSS
 - Zustand (State Management)
 - TanStack Query (Data Fetching)
-│   │   ├── scraping/      # Scraper implementations
-│   │   ├── workers/       # Background jobs
-│   │   └── __init__.py
-│   ├── requirements.txt
-│   └── main.py
-│
-├── database/              # Database setup
-│   └── init.sql          # Schema initialization
-│
-├── docker/               # Docker configuration
-│   ├── Dockerfile.backend
-│   ├── Dockerfile.frontend
+- Lucide React (Icons)
+
+**Backend**
+- FastAPI (Python)
+- PostgreSQL + pgvector
+- SQLAlchemy ORM
+- OpenAI API (GPT‑4 & Embeddings)
+- APScheduler (Background Jobs)
+
+**Infrastructure**
+- Docker & Docker Compose
+- PostgreSQL 15 with pgvector
 │   ├── docker-compose.yml
 │   └── nginx.conf
 │
@@ -397,4 +397,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Mobile app (React Native)
 - [ ] Batch-wise filtering
 - [ ] Company reviews and ratings
-- [ ] Interview preparation resources
