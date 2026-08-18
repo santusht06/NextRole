@@ -157,19 +157,19 @@ docker compose -f docker/docker-compose.yml exec backend python -m app.core.data
 
 # Seed sample data
 docker compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
-# Start server
-uvicorn app.main:app --reload --port 8000
 ```
 
-##### Frontend Setup
+Access:
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+- **Database**: localhost:5432
+
+### Local Development Setup
+
+#### Backend Setup
 
 ```bash
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start dev server
 npm run dev
 ```
 
