@@ -10,18 +10,18 @@ A modern, production‑ready platform for discovering genuine and active student
    git clone https://github.com/yourusername/NextRole.git
    cd NextRole
    ```
-- **Trending & Recommendations**: AI-based opportunity recommendations
-- **Bookmark System**: Save opportunities for later
-- **Dark Mode**: Modern UI with dark mode support
-- **Real-time Updates**: Background jobs for continuous opportunity freshness
 
-## 🏗️ Architecture
+2. **Backend dependencies**
 
-### Tech Stack
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate   # Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-**Frontend**
-- React 18 + Vite
-- TypeScript
+3. **Frontend dependencies**
+
 - TailwindCSS
 - Zustand (State Management)
 - TanStack Query (Data Fetching)
@@ -400,4 +400,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Interview preparation resources
 - [ ] Success stories and testimonials
 
----
