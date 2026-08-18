@@ -170,18 +170,18 @@ Access:
 #### Backend Setup
 
 ```bash
-npm run dev
-```
+cd backend
 
-### Database Setup
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
-The database schema includes:
+# Install dependencies
+pip install -r requirements.txt
 
-- **opportunities**: Main opportunity listings
-- **users**: User accounts and profiles
-- **saved_opportunities**: Bookmarked opportunities
-- **embeddings**: Vector embeddings for semantic search
-- **scrape_logs**: Scraping history and logs
+# Run migrations (if using Alembic)
+alembic upgrade head
+
 
 pgvector is automatically created and indexes are set up for optimal performance.
 
@@ -391,4 +391,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 
 - [ ] User authentication with OAuth
 - [ ] Email alerts for new opportunities
-- [ ] Resume matching and ranking
