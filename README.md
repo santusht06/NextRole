@@ -145,18 +145,18 @@ SECRET_KEY=your-super-secret-key-change-in-production
 DEBUG=True
 ENVIRONMENT=development
 ```
-cd backend
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### Using Docker Compose (Recommended)
 
-# Install dependencies
-pip install -r requirements.txt
+```bash
+# Build and start all services
+docker compose -f docker/docker-compose.yml up -d
 
-# Run migrations (if using Alembic)
-alembic upgrade head
+# Create database tables
+docker compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db
 
+# Seed sample data
+docker compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
 # Start server
 uvicorn app.main:app --reload --port 8000
 ```
@@ -392,4 +392,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] User authentication with OAuth
 - [ ] Email alerts for new opportunities
 - [ ] Resume matching and ranking
-- [ ] Advanced filtering and saved searches
