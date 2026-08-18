@@ -280,18 +280,18 @@ Combines keyword and semantic search for optimal results.
 ### AI Reranking (Optional)
 GPT‑4 reranks results based on query relevance for higher accuracy.
 
-- Frontend code splitting with Vite
-- Efficient pagination
-- Caching strategies
-- Background job optimization
+## 🎨 UI Components
 
-## 📝 Seed Database
+### Key Components
 
-Run sample data:
+- **OpportunityCard** – Display individual opportunities  
+- **FilterBar** – Advanced filtering options  
+- **Pagination** – Efficient result navigation  
+- **LoadingStates** – Skeleton loaders and spinners  
+- **Header** – Navigation and search  
+- **MainLayout** – Consistent page layout  
 
-```bash
-python scripts/seed_db.py
-```
+## 🔒 Security Features
 
 This creates:
 - Sample opportunities from various sources
@@ -383,4 +383,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 - pgvector for vector search capabilities
 - All contributors and users
 
-## 📧 Support
