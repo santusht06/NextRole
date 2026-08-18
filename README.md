@@ -1,15 +1,15 @@
 # NextRole - AI-Powered Student Opportunity Platform
 
-A modern, production-ready platform for discovering genuine and active student opportunities including internships, hackathons, coding contests, graduate programs, and hiring challenges.
+A modern, production‑ready platform for discovering genuine and active student opportunities including internships, hackathons, coding contests, graduate programs, and hiring challenges.
 
-## 🎯 Key Features
+## 📦 Installation
 
-- **AI-Powered Discovery**: Intelligent semantic search using OpenAI embeddings
-- **Fresh Opportunities Only**: Only active listings with automatic expiry detection
-- **Multiple Aggregation Sources**: Scrapes from Devfolio, HackerEarth, Unstop, MLH, and company career pages
-- **Semantic Search**: Find opportunities by meaning, not just keywords
-- **Smart Categorization**: AI-extracted structured data with automatic classification
-- **Vector Search**: pgvector-powered similarity search for better recommendations
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/NextRole.git
+   cd NextRole
+   ```
 - **Trending & Recommendations**: AI-based opportunity recommendations
 - **Bookmark System**: Save opportunities for later
 - **Dark Mode**: Modern UI with dark mode support
@@ -401,5 +401,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Success stories and testimonials
 
 ---
-
-**Made with ❤️ for students**
