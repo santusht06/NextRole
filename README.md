@@ -96,18 +96,18 @@ NextRole/
 │   │   ├── scraping/      # Scraper implementations
 │   │   ├── workers/       # Background jobs
 │   │   └── __init__.py
-
-#### 2. Environment Configuration
-
-Create `.env` file from template:
-
-```bash
-cp backend/.env.example backend/.env
-```
-
-Update with your configuration:
-
-```makefile
+│   ├── requirements.txt
+│   └── main.py
+│
+├── database/              # Database setup
+│   └── init.sql          # Schema initialization
+│
+├── docker/               # Docker configuration
+│   ├── Dockerfile.backend
+│   ├── Dockerfile.frontend
+│   ├── docker-compose.yml
+│   └── nginx.conf
+│
 # Database
 DATABASE_URL=postgresql://user:password@localhost:5432/student_opportunities
 
@@ -395,4 +395,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Advanced filtering and saved searches
 - [ ] Opportunity recommendations based on user profile
 - [ ] Mobile app (React Native)
-- [ ] Batch-wise filtering
