@@ -366,16 +366,16 @@ npm run build   # Outputs to dist/
 # Ensure all environment variables are set
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
 
-## 📄 License
+### Docker Production
 
-This project is licensed under the MIT License - see LICENSE file for details.
+```bash
+docker compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
+```
 
-## 🙏 Acknowledgments
+## 🤝 Contributing
 
-- OpenAI for GPT-4 and embedding models
-- FastAPI for the backend framework
+1. Fork the repository  
+2. Create feature branch (`git checkout -b feature/amazing-feature`)  
+3. Commit changes (`git commit -m 'Add amazing feature'`)  
+4. Push to branch (`git push
