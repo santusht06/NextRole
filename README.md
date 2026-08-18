@@ -342,18 +342,18 @@ The platform is fully responsive:
 - Dark mode support across all breakpoints  
 
 ## 🧪 Testing
-## 📦 Deployment
-
-### Production Build
 
 ```bash
-# Frontend
-cd frontend
-npm run build
-# Outputs to dist/
+# Backend tests
+cd backend
+pytest
 
-# Backend
-# Ensure all environment variables are set
+# Frontend tests
+cd frontend
+npm test
+```
+
+## 📦 Deployment
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
@@ -380,4 +380,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 - OpenAI for GPT-4 and embedding models
 - FastAPI for the backend framework
 - React team for the frontend library
-- pgvector for vector search capabilities
