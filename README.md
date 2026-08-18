@@ -108,18 +108,18 @@ NextRole/
 │   ├── docker-compose.yml
 │   └── nginx.conf
 │
-# Database
-DATABASE_URL=postgresql://user:password@localhost:5432/student_opportunities
-
-# OpenAI
-OPENAI_API_KEY=your-openai-api-key-here
-OPENAI_MODEL=gpt-4
-
-# Security
-SECRET_KEY=your-super-secret-key-change-in-production
-DEBUG=True
-ENVIRONMENT=development
+└── scripts/              # Helper scripts
+    └── seed_db.py       # Seed test data
 ```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.11+
+- Node.js 18+
+- Docker & Docker Compose
+- PostgreSQL 15+ with pgvector extension
 
 #### 3. Using Docker Compose (Recommended)
 
@@ -394,4 +394,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Resume matching and ranking
 - [ ] Advanced filtering and saved searches
 - [ ] Opportunity recommendations based on user profile
-- [ ] Mobile app (React Native)
