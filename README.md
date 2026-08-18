@@ -268,18 +268,18 @@ Automatic tasks running via APScheduler:
 ### Keyword Search
 Traditional full‑text search on title, description, company, and skills.
 
-- JWT-based authentication
-- Password hashing with bcrypt
-- CORS protection
-- Input validation with Pydantic
-- SQL injection prevention via SQLAlchemy ORM
-- Rate limiting ready (implement as needed)
-- Environment variable configuration
+### Semantic Search
+AI‑powered similarity search using OpenAI embeddings. Find opportunities by meaning:
+- “AI internships for freshers”
+- “hackathons without DSA”
+- “remote web dev opportunities”
 
-## 📊 Performance Optimization
+### Hybrid Search
+Combines keyword and semantic search for optimal results.
 
-- Vector index optimization with IVFFlat
-- Database query optimization with indexes
+### AI Reranking (Optional)
+GPT‑4 reranks results based on query relevance for higher accuracy.
+
 - Frontend code splitting with Vite
 - Efficient pagination
 - Caching strategies
@@ -384,4 +384,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 - All contributors and users
 
 ## 📧 Support
-
