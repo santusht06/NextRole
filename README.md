@@ -231,18 +231,18 @@ http://localhost:8000/api
 - `GET /search/ai-recommendations?query=query` – AI‑powered recommendations
 
 #### Saved
+- `GET /saved` – Get user's saved opportunities
+- `POST /saved/{opportunity_id}` – Save opportunity
+- `DELETE /saved/{opportunity_id}` – Unsave opportunity
+- `GET /saved/check/{opportunity_id}` – Check if saved
 
-- **Expire Old Opportunities** (Every 6 hours): Mark past deadline opportunities as expired
-- **Verify Apply Links** (Every 12 hours): Check link validity
-- **Run Scrapers** (Every 24 hours): Fetch new opportunities
-- **Deduplicate** (Every 48 hours): Remove duplicate entries
-- **Refresh Embeddings** (Daily): Update embeddings for better search
+#### Health
+- `GET /health` – Health check
+- `GET /health/db` – Database health check
 
-## 🔍 Search Features
+Full API documentation available at: `http://localhost:8000/docs`
 
-### Keyword Search
-Traditional full-text search on title, description, company, and skills.
-
+## 🔄 Data Pipeline
 ### Semantic Search
 AI-powered similarity search using OpenAI embeddings. Find opportunities by meaning:
 - "AI internships for freshers"
@@ -386,4 +386,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ## 📧 Support
 
 For support, email support@nextrole.app or open an issue on GitHub.
-
