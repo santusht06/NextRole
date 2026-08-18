@@ -194,18 +194,18 @@ cd frontend
 # Install dependencies
 npm install
 
-#### Opportunities
-- `GET /opportunities` - List all active opportunities
-- `GET /opportunities/{id}` - Get specific opportunity
-- `GET /opportunities/trending` - Get trending opportunities
-- `GET /opportunities/stats/overview` - Get statistics
+# Start dev server
+npm run dev
+```
 
-#### Search
-- `GET /search?q=query` - Keyword search
-- `GET /search/semantic?q=query` - Semantic search with embeddings
-- `GET /search/ai-recommendations?query=query` - AI-powered recommendations
+### Database Setup
 
-#### Saved
+The database schema includes:
+
+- **opportunities**: Main opportunity listings
+- **users**: User accounts and profiles
+- **saved_opportunities**: Bookmarked opportunities
+- **embeddings**: Vector embeddings for semantic search
 - `GET /saved` - Get user's saved opportunities
 - `POST /saved/{opportunity_id}` - Save opportunity
 - `DELETE /saved/{opportunity_id}` - Unsave opportunity
@@ -388,4 +388,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 For support, email support@nextrole.app or open an issue on GitHub.
 
 ## 🗺️ Roadmap
-
