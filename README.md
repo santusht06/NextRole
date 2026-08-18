@@ -293,18 +293,18 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 
 ## 🔒 Security Features
 
-This creates:
-- Sample opportunities from various sources
-- Demo user accounts
-- Sample embeddings
-- Test data for development
+- JWT‑based authentication  
+- Password hashing with bcrypt  
+- CORS protection  
+- Input validation with Pydantic  
+- SQL injection prevention via SQLAlchemy ORM  
+- Rate limiting ready (implement as needed)  
+- Environment variable configuration  
 
-## 🐛 Development Tips
+## 📊 Performance Optimization
 
-### Adding New Opportunity Source
-
-1. Create scraper in `backend/app/scraping/scrapers.py`
-2. Extend `BaseScraper` class
+- Vector index optimization with IVFFlat  
+- Database query optimization with indexes  
 3. Implement `scrape()` method
 4. Register in `run_all_scrapers()`
 
