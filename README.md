@@ -47,18 +47,18 @@ A modern, production‑ready platform for discovering genuine and active student
 - **Trending & Recommendations**: AI‑based opportunity recommendations
 - **Bookmark System**: Save opportunities for later
 - **Dark Mode**: Modern UI with dark mode support
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── services/      # API services
-│   │   ├── store/         # Zustand stores
-│   │   ├── types/         # TypeScript types
-│   │   └── utils/         # Utility functions
-│   └── package.json
-│
-├── backend/               # FastAPI application
-│   ├── app/
-│   │   ├── api/           # Route handlers
-│   │   ├── models/        # SQLAlchemy models
-│   │   ├── services/      # Business logic
+- **Real-time Updates**: Background jobs for continuous opportunity freshness
+
+## 🏗️ Architecture
+
+### Tech Stack
+
+**Frontend**
+- React 18 + Vite
+- TypeScript
+- TailwindCSS
+- Zustand (State Management)
+- TanStack Query (Data Fetching)
 │   │   ├── scraping/      # Scraper implementations
 │   │   ├── workers/       # Background jobs
 │   │   └── __init__.py
@@ -398,4 +398,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Batch-wise filtering
 - [ ] Company reviews and ratings
 - [ ] Interview preparation resources
-- [ ] Success stories and testimonials
