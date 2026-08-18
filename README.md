@@ -354,18 +354,18 @@ npm test
 ```
 
 ## 📦 Deployment
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
 
-### Docker Production
+### Production Build
 
 ```bash
-docker-compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
+# Frontend
+cd frontend
+npm run build   # Outputs to dist/
+
+# Backend
+# Ensure all environment variables are set
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
 2. Create feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing-feature`)
@@ -379,4 +379,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 - OpenAI for GPT-4 and embedding models
 - FastAPI for the backend framework
-- React team for the frontend library
