@@ -329,19 +329,19 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 ### Customizing Frontend
 
 1. Modify components in `frontend/src/components/`  
+2. Update stores in `frontend/src/store/`  
+3. Add pages in `frontend/src/pages/`  
+4. Customize styling with Tailwind  
+
+## 📱 Responsive Design
+
+The platform is fully responsive:
+- Mobile‑first approach  
+- Tablet optimization  
+- Desktop experience  
+- Dark mode support across all breakpoints  
 
 ## 🧪 Testing
-
-```bash
-# Backend tests
-cd backend
-pytest
-
-# Frontend tests
-cd frontend
-npm test
-```
-
 ## 📦 Deployment
 
 ### Production Build
