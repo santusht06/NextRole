@@ -133,18 +133,18 @@ cp backend/.env.example backend/.env
 Update with your configuration:
 
 ```dotenv
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/student_opportunities
 
-Access:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Docs**: http://localhost:8000/docs
-- **Database**: localhost:5432
+# OpenAI
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_MODEL=gpt-4
 
-#### 4. Local Development Setup
-
-##### Backend Setup
-
-```bash
+# Security
+SECRET_KEY=your-super-secret-key-change-in-production
+DEBUG=True
+ENVIRONMENT=development
+```
 cd backend
 
 # Create virtual environment
@@ -393,4 +393,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Email alerts for new opportunities
 - [ ] Resume matching and ranking
 - [ ] Advanced filtering and saved searches
-- [ ] Opportunity recommendations based on user profile
