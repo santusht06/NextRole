@@ -34,19 +34,19 @@ A modern, production‑ready platform for discovering genuine and active student
    docker compose -f docker-compose.yml up -d
    ```
 
-**Infrastructure**
-- Docker & Docker Compose
-- PostgreSQL 15 with pgvector
-- Nginx (Reverse Proxy)
+   This builds and starts the backend, frontend, PostgreSQL, and Nginx services.
 
-## 📋 Project Structure
+## 🎯 Key Features
 
-```
-NextRole/
-├── frontend/               # React application
-│   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── pages/         # Page components
+- **AI-Powered Discovery**: Intelligent semantic search using OpenAI embeddings
+- **Fresh Opportunities Only**: Only active listings with automatic expiry detection
+- **Multiple Aggregation Sources**: Scrapes from Devfolio, HackerEarth, Unstop, MLH, and company career pages
+- **Semantic Search**: Find opportunities by meaning, not just keywords
+- **Smart Categorization**: AI‑extracted structured data with automatic classification
+- **Vector Search**: pgvector‑powered similarity search for better recommendations
+- **Trending & Recommendations**: AI‑based opportunity recommendations
+- **Bookmark System**: Save opportunities for later
+- **Dark Mode**: Modern UI with dark mode support
 │   │   ├── hooks/         # Custom React hooks
 │   │   ├── services/      # API services
 │   │   ├── store/         # Zustand stores
