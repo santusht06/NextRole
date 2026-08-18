@@ -182,17 +182,17 @@ pip install -r requirements.txt
 # Run migrations (if using Alembic)
 alembic upgrade head
 
-
-pgvector is automatically created and indexes are set up for optimal performance.
-
-## 📚 API Documentation
-
-### Base URL
-```
-http://localhost:8000/api
+# Start server
+uvicorn app.main:app --reload --port 8000
 ```
 
-### Key Endpoints
+#### Frontend Setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
 
 #### Opportunities
 - `GET /opportunities` - List all active opportunities
@@ -389,5 +389,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 
 ## 🗺️ Roadmap
 
-- [ ] User authentication with OAuth
-- [ ] Email alerts for new opportunities
