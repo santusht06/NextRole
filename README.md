@@ -22,17 +22,17 @@ A modern, production‑ready platform for discovering genuine and active student
 
 3. **Frontend dependencies**
 
-- TailwindCSS
-- Zustand (State Management)
-- TanStack Query (Data Fetching)
-- Lucide React (Icons)
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-**Backend**
-- FastAPI (Python)
-- PostgreSQL + pgvector
-- SQLAlchemy ORM
-- OpenAI API (GPT-4 & Embeddings)
-- APScheduler (Background Jobs)
+4. **Optional: Docker setup**
+
+   ```bash
+   cd ../docker
+   docker compose -f docker-compose.yml up -d
+   ```
 
 **Infrastructure**
 - Docker & Docker Compose
@@ -399,4 +399,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Company reviews and ratings
 - [ ] Interview preparation resources
 - [ ] Success stories and testimonials
-
