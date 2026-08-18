@@ -84,18 +84,18 @@ NextRole/
 │   │   ├── hooks/         # Custom React hooks
 │   │   ├── services/      # API services
 │   │   ├── store/         # Zustand stores
-- Docker & Docker Compose
-- PostgreSQL 15+ with pgvector extension
-- OpenAI API Key
-
-### Setup Instructions
-
-#### 1. Clone Repository
-
-```bash
-git clone https://github.com/yourusername/NextRole.git
-cd NextRole
-```
+│   │   ├── types/         # TypeScript types
+│   │   └── utils/         # Utility functions
+│   └── package.json
+│
+├── backend/               # FastAPI application
+│   ├── app/
+│   │   ├── api/           # Route handlers
+│   │   ├── models/        # SQLAlchemy models
+│   │   ├── services/      # Business logic
+│   │   ├── scraping/      # Scraper implementations
+│   │   ├── workers/       # Background jobs
+│   │   └── __init__.py
 
 #### 2. Environment Configuration
 
@@ -396,4 +396,3 @@ For support, email support@nextrole.app or open an issue on GitHub.
 - [ ] Opportunity recommendations based on user profile
 - [ ] Mobile app (React Native)
 - [ ] Batch-wise filtering
-- [ ] Company reviews and ratings
