@@ -71,19 +71,19 @@ A modern, production‑ready platform for discovering genuine and active student
 **Infrastructure**
 - Docker & Docker Compose
 - PostgreSQL 15 with pgvector
-│   ├── docker-compose.yml
-│   └── nginx.conf
-│
-└── scripts/              # Helper scripts
-    └── seed_db.py       # Seed test data
+- Nginx (Reverse Proxy)
+
+## 📋 Project Structure
+
 ```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.11+
-- Node.js 18+
+NextRole/
+├── frontend/               # React application
+│   ├── src/
+│   │   ├── components/    # Reusable components
+│   │   ├── pages/         # Page components
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── services/      # API services
+│   │   ├── store/         # Zustand stores
 - Docker & Docker Compose
 - PostgreSQL 15+ with pgvector extension
 - OpenAI API Key
