@@ -243,19 +243,19 @@ http://localhost:8000/api
 Full API documentation available at: `http://localhost:8000/docs`
 
 ## 🔄 Data Pipeline
-### Semantic Search
-AI-powered similarity search using OpenAI embeddings. Find opportunities by meaning:
-- "AI internships for freshers"
-- "hackathons without DSA"
-- "remote web dev opportunities"
 
-### Hybrid Search
-Combines keyword and semantic search for optimal results.
+### Scraping Pipeline
 
-### AI Reranking (Optional)
-GPT-4 reranks results based on query relevance for better accuracy.
+1. **Source Aggregation** – Scrape opportunities from multiple sources  
+2. **Deduplication** – Identify and merge duplicate opportunities  
+3. **AI Extraction** – Extract structured data using GPT‑4  
+4. **Classification** – Automatically classify opportunity type  
+5. **Embedding Generation** – Create vector embeddings for semantic search  
+6. **Storage** – Store in PostgreSQL with pgvector  
 
-## 🎨 UI Components
+### Background Jobs
+
+Automatic tasks running via APScheduler:
 
 ### Key Components
 
