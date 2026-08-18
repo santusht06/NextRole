@@ -317,18 +317,18 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 1. Create scraper in `backend/app/scraping/scrapers.py`  
 2. Extend `BaseScraper` class  
 3. Implement `scrape()` method  
-1. Modify components in `frontend/src/components/`
-2. Update stores in `frontend/src/store/`
-3. Add pages in `frontend/src/pages/`
-4. Customize styling with Tailwind
+4. Register in `run_all_scrapers()`
 
-## 📱 Responsive Design
+### Adding New API Endpoint
 
-The platform is fully responsive:
-- Mobile-first approach
-- Tablet optimization
-- Desktop experience
-- Dark mode support across all breakpoints
+1. Create route in `backend/app/api/`  
+2. Add database queries in services  
+3. Define Pydantic schemas  
+4. Test with FastAPI docs at `/docs`
+
+### Customizing Frontend
+
+1. Modify components in `frontend/src/components/`  
 
 ## 🧪 Testing
 
@@ -381,4 +381,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 - FastAPI for the backend framework
 - React team for the frontend library
 - pgvector for vector search capabilities
-- All contributors and users
