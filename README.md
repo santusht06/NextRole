@@ -305,18 +305,18 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 
 - Vector index optimization with IVFFlat  
 - Database query optimization with indexes  
-3. Implement `scrape()` method
-4. Register in `run_all_scrapers()`
+- Frontend code splitting with Vite  
+- Efficient pagination  
+- Caching strategies  
+- Background job optimization  
 
-### Adding New API Endpoint
+## 🐛 Development Tips
 
-1. Create route in `backend/app/api/`
-2. Add database queries in services
-3. Define Pydantic schemas
-4. Test with FastAPI docs at `/docs`
+### Adding New Opportunity Source
 
-### Customizing Frontend
-
+1. Create scraper in `backend/app/scraping/scrapers.py`  
+2. Extend `BaseScraper` class  
+3. Implement `scrape()` method  
 1. Modify components in `frontend/src/components/`
 2. Update stores in `frontend/src/store/`
 3. Add pages in `frontend/src/pages/`
@@ -382,4 +382,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 - React team for the frontend library
 - pgvector for vector search capabilities
 - All contributors and users
-
