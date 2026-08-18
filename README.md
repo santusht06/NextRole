@@ -206,18 +206,18 @@ The database schema includes:
 - **users**: User accounts and profiles
 - **saved_opportunities**: Bookmarked opportunities
 - **embeddings**: Vector embeddings for semantic search
-- `GET /saved` - Get user's saved opportunities
-- `POST /saved/{opportunity_id}` - Save opportunity
-- `DELETE /saved/{opportunity_id}` - Unsave opportunity
-- `GET /saved/check/{opportunity_id}` - Check if saved
+- **scrape_logs**: Scraping history and logs
 
-#### Health
-- `GET /health` - Health check
-- `GET /health/db` - Database health check
+pgvector is automatically created and indexes are set up for optimal performance.
 
-Full API documentation available at: `http://localhost:8000/docs`
+## 📚 API Documentation
 
-## 🔄 Data Pipeline
+### Base URL
+```
+http://localhost:8000/api
+```
+
+### Key Endpoints
 
 ### Scraping Pipeline
 
