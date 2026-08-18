@@ -257,16 +257,16 @@ Full API documentation available at: `http://localhost:8000/docs`
 
 Automatic tasks running via APScheduler:
 
-### Key Components
+- **Expire Old Opportunities** (Every 6 h) – Mark past‑deadline opportunities as expired  
+- **Verify Apply Links** (Every 12 h) – Check link validity  
+- **Run Scrapers** (Every 24 h) – Fetch new opportunities  
+- **Deduplicate** (Every 48 h) – Remove duplicate entries  
+- **Refresh Embeddings** (Daily) – Update embeddings for better search  
 
-- **OpportunityCard**: Display individual opportunities
-- **FilterBar**: Advanced filtering options
-- **Pagination**: Efficient result navigation
-- **LoadingStates**: Skeleton loaders and spinners
-- **Header**: Navigation and search
-- **MainLayout**: Consistent page layout
+## 🔍 Search Features
 
-## 🔒 Security Features
+### Keyword Search
+Traditional full‑text search on title, description, company, and skills.
 
 - JWT-based authentication
 - Password hashing with bcrypt
@@ -385,4 +385,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 ## 📧 Support
 
-For support, email support@nextrole.app or open an issue on GitHub.
