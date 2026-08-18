@@ -219,18 +219,18 @@ http://localhost:8000/api
 
 ### Key Endpoints
 
-### Scraping Pipeline
+#### Opportunities
+- `GET /opportunities` – List all active opportunities
+- `GET /opportunities/{id}` – Get specific opportunity
+- `GET /opportunities/trending` – Get trending opportunities
+- `GET /opportunities/stats/overview` – Get statistics
 
-1. **Source Aggregation**: Scrape opportunities from multiple sources
-2. **Deduplication**: Identify and merge duplicate opportunities
-3. **AI Extraction**: Extract structured data using GPT-4
-4. **Classification**: Automatically classify opportunity type
-5. **Embedding Generation**: Create vector embeddings for semantic search
-6. **Storage**: Store in PostgreSQL with pgvector
+#### Search
+- `GET /search?q=query` – Keyword search
+- `GET /search/semantic?q=query` – Semantic search with embeddings
+- `GET /search/ai-recommendations?query=query` – AI‑powered recommendations
 
-### Background Jobs
-
-Automatic tasks running via APScheduler:
+#### Saved
 
 - **Expire Old Opportunities** (Every 6 hours): Mark past deadline opportunities as expired
 - **Verify Apply Links** (Every 12 hours): Check link validity
@@ -387,4 +387,3 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 For support, email support@nextrole.app or open an issue on GitHub.
 
-## 🗺️ Roadmap
