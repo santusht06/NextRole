@@ -120,19 +120,19 @@ NextRole/
 - Node.js 18+
 - Docker & Docker Compose
 - PostgreSQL 15+ with pgvector extension
+- OpenAI API Key
 
-#### 3. Using Docker Compose (Recommended)
+### Environment Configuration
+
+Create `.env` file from template:
 
 ```bash
-# Build and start all services
-docker-compose -f docker/docker-compose.yml up -d
-
-# Create database tables
-docker-compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db
-
-# Seed sample data
-docker-compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
+cp backend/.env.example backend/.env
 ```
+
+Update with your configuration:
+
+```dotenv
 
 Access:
 - **Frontend**: http://localhost:3000
