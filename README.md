@@ -346,36 +346,3 @@ The platform is fully responsive:
 ```bash
 # Backend tests
 cd backend
-pytest
-
-# Frontend tests
-cd frontend
-npm test
-```
-
-## 📦 Deployment
-
-### Production Build
-
-```bash
-# Frontend
-cd frontend
-npm run build   # Outputs to dist/
-
-# Backend
-# Ensure all environment variables are set
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
-
-### Docker Production
-
-```bash
-docker compose -f docker/docker-compose.yml -e ENVIRONMENT=production up -d
-```
-
-## 🤝 Contributing
-
-1. Fork the repository  
-2. Create feature branch (`git checkout -b feature/amazing-feature`)  
-3. Commit changes (`git commit -m 'Add amazing feature'`)  
-4. Push to branch (`git push
