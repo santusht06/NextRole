@@ -314,35 +314,4 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 
 ### Adding New Opportunity Source
 
-1. Create scraper in `backend/app/scraping/scrapers.py`  
-2. Extend `BaseScraper` class  
-3. Implement `scrape()` method  
-4. Register in `run_all_scrapers()`
-
-### Adding New API Endpoint
-
-1. Create route in `backend/app/api/`  
-2. Add database queries in services  
-3. Define Pydantic schemas  
-4. Test with FastAPI docs at `/docs`
-
-### Customizing Frontend
-
-1. Modify components in `frontend/src/components/`  
-2. Update stores in `frontend/src/store/`  
-3. Add pages in `frontend/src/pages/`  
-4. Customize styling with Tailwind  
-
-## 📱 Responsive Design
-
-The platform is fully responsive:
-- Mobile‑first approach  
-- Tablet optimization  
-- Desktop experience  
-- Dark mode support across all breakpoints  
-
-## 🧪 Testing
-
-```bash
-# Backend tests
-cd backend
+1. Create scraper
