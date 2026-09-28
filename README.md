@@ -157,12 +157,14 @@ docker compose -f docker/docker-compose.yml up -d
 # Create database tables
 docker compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db
 
+# Seed sample data
+docker compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
 ```
 
 Access:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Docs**: http://localhost:8000/docs
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8000](http://localhost:8000)
+- **API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Database**: localhost:5432
 
 ### Local Development Setup
@@ -214,7 +216,7 @@ pgvector is automatically created and indexes are set up for optimal performance
 
 ### Base URL
 ```
-http://localhost:8000/api
+[http://localhost:8000/api](http://localhost:8000/api)
 ```
 
 ### Key Endpoints
@@ -235,8 +237,6 @@ http://localhost:8000/api
 - `POST /saved/{opportunity_id}` – Save opportunity
 - `DELETE /saved/{opportunity_id}` – Unsave opportunity
 - `GET /saved/check/{opportunity_id}` – Check if saved
-
-#### Health
 - `GET /health` – Health check
 - `GET /health/db` – Database health check
 
