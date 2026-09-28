@@ -1,5 +1,7 @@
 # NextRole - AI-Powered Student Opportunity Platform
 
+![AI Maintained](https://img.shields.io/badge/readme-AI%20maintained-blue)
+
 A modern, production‑ready platform for discovering genuine and active student opportunities including internships, hackathons, coding contests, graduate programs, and hiring challenges.
 
 ## 📦 Installation
@@ -7,7 +9,7 @@ A modern, production‑ready platform for discovering genuine and active student
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/NextRole.git
+   git clone [https://github.com/yourusername/NextRole.git](https://github.com/yourusername/NextRole.git)
    cd NextRole
    ```
 
@@ -75,8 +77,6 @@ A modern, production‑ready platform for discovering genuine and active student
 
 ## 📋 Project Structure
 
-```
-NextRole/
 ├── frontend/               # React application
 │   ├── src/
 │   │   ├── components/    # Reusable components
@@ -314,4 +314,3 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 
 ### Adding New Opportunity Source
 
-1. Create scraper
