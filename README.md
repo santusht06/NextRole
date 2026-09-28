@@ -237,10 +237,12 @@ pgvector is automatically created and indexes are set up for optimal performance
 - `POST /saved/{opportunity_id}` – Save opportunity
 - `DELETE /saved/{opportunity_id}` – Unsave opportunity
 - `GET /saved/check/{opportunity_id}` – Check if saved
+
+#### Health
 - `GET /health` – Health check
 - `GET /health/db` – Database health check
 
-Full API documentation available at: `http://localhost:8000/docs`
+Full API documentation available at: `[http://localhost:8000/docs`](http://localhost:8000/docs`)
 
 ## 🔄 Data Pipeline
 
