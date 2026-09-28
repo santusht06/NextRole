@@ -77,6 +77,8 @@ A modern, production‑ready platform for discovering genuine and active student
 
 ## 📋 Project Structure
 
+```
+NextRole/
 ├── frontend/               # React application
 │   ├── src/
 │   │   ├── components/    # Reusable components
@@ -155,8 +157,6 @@ docker compose -f docker/docker-compose.yml up -d
 # Create database tables
 docker compose -f docker/docker-compose.yml exec backend python -m app.core.database init_db
 
-# Seed sample data
-docker compose -f docker/docker-compose.yml exec backend python scripts/seed_db.py
 ```
 
 Access:
@@ -314,3 +314,4 @@ GPT‑4 reranks results based on query relevance for higher accuracy.
 
 ### Adding New Opportunity Source
 
+1. Create scraper
